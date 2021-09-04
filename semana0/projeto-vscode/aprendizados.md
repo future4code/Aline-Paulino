@@ -1,0 +1,2 @@
+Aprendizados da semana
+Esta semana na **Labenu** aprendi primeiramente o que é um terminal e como acessa-lo, assim como introduzimos tambem informaçoes sobre o githurb, apesar de complicado e de se passar apenas uma semana ja iniciamos as operaçoes de alguns comandos introdutorios (touch, mkdir, git branch, git checkout...), vemos tambem uma breve demonstração de VScode.
