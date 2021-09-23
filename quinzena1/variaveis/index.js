@@ -25,3 +25,10 @@ let c = b
 b = a
 a = c
 console.log(a,b)
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 95600101f4adb5174b3e2ff5b37e2d4edb708f98
