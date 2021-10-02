@@ -21,11 +21,13 @@
 
   let pontosUsuario = primCartaUsuario.valor + segCartaUsuario.valor
   let pontosComputador = primCartaComputador.valor + segCartaComputador.valor
-    
- console.log("Usuário - cartas:" + primCartaUsuario.texto +" " + segCartaUsuario.texto +" - " + pontosUsuario)
- console.log("Computador - cartas:" + primCartaComputador.texto +" "+ segCartaComputador.texto + " - " +pontosComputador )  
+  
+  console.log("Computador - cartas:" + primCartaComputador.texto +" "+ segCartaComputador.texto + " - " +pontosComputador )  
+  console.log("Usuario - cartas:" + primCartaUsuario.texto +" " + segCartaUsuario.texto +" - " + pontosUsuario)
 
  if (pontosUsuario > pontosComputador) {console.log("O usuário ganhou!")
- } else if (pontosComputador > pontosUsuario) {console.log("O computador ganhou!") } 
- else if (pontosUsuario === pontosComputador) { console.log("Empate!")}
+ } else if (pontosComputador > pontosUsuario) 
+ {console.log("O computador ganhou!") } 
+ else if (pontosUsuario === pontosComputador) 
+ { console.log("Empate!")}
 } else { console.log("O jogo acabou") }
