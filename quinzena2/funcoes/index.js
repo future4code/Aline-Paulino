@@ -18,7 +18,7 @@
 //EXERCICIO 1 - ESCRITA
 //A
 
-function meusDados() {console.log("Eu sou a Aline, tenho 21 anos, moro em Minas e INTERPRETAÇÃOsou estudante Labenu.")}
+/*function meusDados() {console.log("Eu sou a Aline, tenho 21 anos, moro em Minas e INTERPRETAÇÃOsou estudante Labenu.")}
 meusDados()
 
 //b
@@ -76,4 +76,6 @@ function contas(nUm,nDois) {
     console.log("multiplicação =", mulplicacao)}
     let primeiroNumero =Number (prompt("Digite um numero"))
     let segundoNumero =Number (prompt("Digite outro numero"))
-    contas(primeiroNumero,segundoNumero)
+    contas(primeiroNumero,segundoNumero)*/
+
+    
