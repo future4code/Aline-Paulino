@@ -138,31 +138,90 @@ function ordenaArray(array) {
     if(controle){
       break;
     }
+    return array
   }
 }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-
-}
+  let nomeModelo = "O Diabo Veste Prada"
+  let anoModelo = 2006
+  let diretorModelo = "David Frankel"
+  let atoresModelo = ["Meryl Streep", "Anne Hathaway", "Emily Blunt","Stanley Tucci"]
+  
+  const filme = {
+    nome: null,
+    ano: null,
+    diretor: null,
+    atores: null}
+  
+    filme.nome = nomeModelo
+    filme.ano = anoModelo
+    filme.diretor = diretorModelo
+    filme.atores = atoresModelo
+  return filme}
 
 // EXERCÍCIO 13
 function imprimeChamada() {
+  let nomeModelo = "O Diabo Veste Prada"
+  let anoModelo = 2006
+  let diretorModelo = "David Frankel"
+  let atoresModelo = ["Meryl Streep", " Anne Hathaway", " Emily Blunt"," Stanley Tucci"]
+  
+  const filme = {
+    nome: null,
+    ano: null,
+    diretor: null,
+    atores: null}
+  
+    filme.nome = nomeModelo
+    filme.ano = anoModelo
+    filme.diretor = diretorModelo
+    filme.atores = atoresModelo
+
+    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
   // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
 }
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
+    let larguraModelo = lado1
+    let alturaModelo = lado2
+    let perimetroModelo = (2 * (lado1 + lado2))
+    let areaModelo = lado1 * lado2
 
+  const medidasRetangulo = {
+    largura: null,
+    altura: null,
+    perimetro: null,
+    area: null}
+  
+    medidasRetangulo.largura = larguraModelo
+    medidasRetangulo.altura = alturaModelo
+    medidasRetangulo.perimetro = perimetroModelo
+    medidasRetangulo.area = areaModelo
+
+  return medidasRetangulo
 }
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
-
+  const novaPessoa = {
+    ... pessoa,
+    nome: "ANÔNIMO"
+  }
+  return novaPessoa
 }
-
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
+  let arrayPadrao = [
+      { nome: "Pedro", idade: 20 },
+      { nome: "João", idade: 10 },
+      { nome: "Paula", idade: 12 },
+      { nome: "Artur", idade: 89 } ]
+
+let novoUsuario = arrayPadrao.filter(arrayPadrao.idade >= 18)
+return novoUsuario
 
 }
 
