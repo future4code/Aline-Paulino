@@ -124,23 +124,36 @@ function segundoMaiorEMenor(array) {
 function ordenaArray(array) {
   let auxiliar
   let controle
-  for(let i = 0; i < array.length; ++i) {
+  for(let i = 0; i < array.length; i+=1) {
     controle = true
-    for(let i = 0; i < (array - 1); ++i) {
+    for(let j = 0; j < (array.length - 1); j+=1) {
 
-      if(array[i] > array[i + 1]){
-        auxiliar = array[i]
-        array[i] = array[i + 1]
-        array[i + 1] = auxiliar
+      if(array[j] > array[j + 1]){
+        auxiliar = array[j]
+        array[j] = array[j + 1]
+        array[j + 1] = auxiliar
         controle = false;
       }
     }
     if(controle){
       break;
     }
-    return array
   }
+  return array
 }
+/*let aux
+    for(let i =0 ; i < array.length ; i+=1){
+      for(let x = 0; x < (array.length-1) ; x+=1){
+        if(array[x] > array[x+1]){
+          aux = array[x];
+          array[x] = array[x+1];
+          array[x+1] = aux;
+        }
+      }
+    } return array
+}*/
+/*Escreva uma função que recebe um array de números e retorne outro array com os números em ordem crescente. 
+(**Desafio**: tentem fazer sem usar função de ordenação de array.)*/
 
 // EXERCÍCIO 12
 function filmeFavorito() {
@@ -214,35 +227,53 @@ function anonimizaPessoa(pessoa) {
 }
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-  let arrayPadrao = [
-      { nome: "Pedro", idade: 20 },
-      { nome: "João", idade: 10 },
-      { nome: "Paula", idade: 12 },
-      { nome: "Artur", idade: 89 } ]
-
-let novoUsuario = arrayPadrao.filter(arrayPadrao.idade >= 18)
-return novoUsuario
-
+  let adultos = arrayDePessoas.filter((valor)=>{
+    if (valor.idade >=18) { 
+      return valor
 }
+})
+return adultos}
+
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
-
+  let menoresDeIdade = arrayDePessoas.filter((valor)=>{
+    if (valor.idade < 18) { 
+      return valor
 }
+})
+return menoresDeIdade
+}
+
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
-
-}
+  let arrayPor2 = array.map((valor)=> {
+  let multiplicacao = valor * 2
+  return multiplicacao
+  })
+  return arrayPor2
+  }
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-
-}
+    let arrayString = array.map((valor)=> {
+    let multiplicacaoString = valor * 2
+    multiplicacaoString = String(multiplicacaoString)
+    return multiplicacaoString
+    })
+    return arrayString
+    }
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
-
+  let arrayParImpar = array.map((valor)=>{
+    if (valor % 2 === 0) { 
+      return `${valor} é par` }
+      else (valor % 2 !== 0)
+      return `${valor} é ímpar`
+})
+return arrayParImpar
 }
 
 // EXERCÍCIO 18A
