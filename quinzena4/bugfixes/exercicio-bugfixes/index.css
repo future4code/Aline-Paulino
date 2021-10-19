@@ -131,3 +131,6 @@ td button {
 .container {
     padding: 4cm;
 }
+table {
+    margin: auto;
+}
