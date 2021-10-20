@@ -141,3 +141,8 @@ img {
 .botaocompra:hover {
     background-color: #fcd113;
     }
+    input {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+    }
