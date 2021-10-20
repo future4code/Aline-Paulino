@@ -4,9 +4,12 @@
   *
   **/
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
+   font-family:"Roboto";
+
 }
 
 h2 {
@@ -34,7 +37,7 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    background: rgb(255, 255, 255);
 }
 
 .botao-amarelo {
@@ -125,8 +128,8 @@ td button {
     color: black;
 }
 
-#back-button:hover {
-    background-color: #635a3d
+.back-button:hover {
+    background-color: #635a3d;
 }
 .container {
     padding: 4cm;
@@ -145,4 +148,12 @@ img {
         border-left: 0;
         border-right: 0;
         border-top: 0;
+    }
+    table {
+        text-align: center;
+    }
+    #container-de-descricao>ol {
+        padding: 15px 0px;
+        width: 300px;
+        margin: auto;
     }
