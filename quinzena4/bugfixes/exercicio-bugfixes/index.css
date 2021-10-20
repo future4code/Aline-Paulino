@@ -137,3 +137,7 @@ table {
 img {
     width: 50px;
 }
+
+.botaocompra:hover {
+    background-color: #fcd113;
+    }
