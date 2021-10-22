@@ -1,0 +1,17 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 30px;
+}
+.menu {
+flex-direction: row;
+}
+co
