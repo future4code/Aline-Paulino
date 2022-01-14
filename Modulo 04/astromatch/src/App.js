@@ -1,10 +1,11 @@
 import logo from './componentes/img/logo.png';
 import iconeAmigo from './componentes/img/icone-amigos.png';
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import axios from 'axios'
 import PerfilCard from './componentes/PerfilCard'
+import Lista from './componentes/Lista'
 
 const Container = styled.div`
 height: 525px;
@@ -35,12 +36,26 @@ margin: 10px;
 `
 
 function App() {
+  const [telaAtual, setTelaAtual] = useState('PerfilCard')
+  const escolheTela = () => {
+    if (telaAtual === 'PerfilCard'){
+      return <PerfilCard/>
+    } else {
+      return <Lista/>
+    }
+  }
+  const mudaTela = () => {
+    telaAtual === 'PerfilCard' ? setTelaAtual('Lista'): setTelaAtual('PerfilCard')
+  }
+
+
+
   return (
     <Container>
       <Header>
-        <ImgLogo src={logo}/><ImgIcon src={iconeAmigo}/>
+        <ImgLogo src={logo}/><ImgIcon onClick={mudaTela} src={iconeAmigo}/>
       </Header>
-      <PerfilCard/>
+      {escolheTela()}
     </Container>
   );
 }
