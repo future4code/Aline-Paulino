@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import sim from './img/sim.png';
@@ -10,11 +10,17 @@ width: 350px;
 border-radius: 10px;
 position: relative;
 `
+const LikeDeslike = styled.div`
+display: flex;
+justify-content: space-between;
+margin: 0 5em;
+`
 const Photo = styled.img`
-height: 80%;
+height: 90%;
 width: 100%;
 border-radius: 10px;
 `
+
 const Descricao = styled.div`
 color: white;
 display:flex;
@@ -29,33 +35,56 @@ top: 16.5em;
 font-size: 20px;
 }
 margin: 0 15px;
-&>div{
-    display: flex;
-    justify-content: space-around;
-}
 `
 const SimNao = styled.img`
 height: 3em;
 width: 3em;
 `
-export default function PerfilCard (){
+const PerfilCard = () => {
+
     const [perfil, setPerfil] = useState({})
-    const buscaPerfil = async() => {
-        let res = await axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/alinePaulino/person")
-        try{console.log("Ok")
-        setPerfil(res.data.profile)}catch(erro){console.log("Erro")}
+    const buscaPerfil = async () => {
+        let res = await axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/A/person")
+        try {
+            console.log("Ok")
+            setPerfil(res.data.profile)
+        } catch (erro) { console.log("Erro") }
+    }
+
+    const Amei = async () => {
+        let url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/A/choose-person'
+        let header = {
+            Headers: {
+                "Content-Type":
+                    "application/json"
+            }
+        }
+
+        let body = {
+            'id': `${perfil.id}`,
+            "choice": true
+        }
+        let requisicao = await axios.post(url, body, header)
+        try {
+            console.log('Enviado')
+            buscaPerfil()
+        } catch(err){
+            console.log('Erro',err)
+        }
     }
     useEffect(buscaPerfil, [])
-    return(
+    return (
         <CardContainer>
-            <Photo src={perfil.photo}/>
+            <Photo src={perfil.photo} />
             <Descricao>
                 <h2>{perfil.name},{perfil.age}</h2>
                 <p>{perfil.bio}</p>
-                <div>
-                    <SimNao src={nao} /><SimNao src={sim}/>
-                </div>
             </Descricao>
+            <LikeDeslike>
+                <SimNao onClick={buscaPerfil} src={nao} /><SimNao onClick={Amei} src={sim} />
+            </LikeDeslike>
         </CardContainer>
     )
 }
+export default PerfilCard
+ 

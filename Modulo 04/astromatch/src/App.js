@@ -3,7 +3,6 @@ import iconeAmigo from './componentes/img/icone-amigos.png';
 import './App.css';
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import axios from 'axios'
 import PerfilCard from './componentes/PerfilCard'
 import Lista from './componentes/Lista'
 
@@ -13,7 +12,6 @@ width: 380px;
 border: 1px solid black;
 border-radius: 10px;
 display: flex;
-justify-content: center;
 align-items: center;
 flex-direction: column;
 margin-top: 2em;
@@ -28,7 +26,7 @@ width: 100%;
 `
 const ImgLogo = styled.img`
 height: 40px;
-margin-left: 115px;
+margin-left: 130px;
 `
 const ImgIcon = styled.img`
 height: 30px;
