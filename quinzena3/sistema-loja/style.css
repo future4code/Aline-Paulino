@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body {
+    background: #00bd5e;
+    color: white;
+    font-weight: 100;
+    display: center;
+    min-block-size: 200vh;
+}
+.inicio a{
+    margin-left: 1rem;
+}
+.inicio h1{
+    margin-left: 0;
+    color: black;
+    font-size: 2rem;
+}
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 3mm;
+    margin-left: 3rem;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+main h1 {
+    color: black;
+    font-size: 2rem;
+}
+.social img{
+    width: 20px;
+    align-items: center;
+    margin-left: 3rem;
+}
+.social img:first-child img{
+    margin-left: 0;
+}
+
+footer {
+    position: absolute;
+	bottom: 0;
+    text-align: left;
+}
+footer p {
+    margin-left: 2rem;
+}
+.inicioFuncionarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 3mm;
+    margin-left: 3rem;
+
+}
+.inicioFuncionarios h1 {
+    margin-left: 0;
+    color: black;
+    font-size: 2rem;
+}
+.inicioFuncionarios a{
+    margin-left: 1rem;}
+
+    .inicioProduto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 3mm;
+        margin-left: 3rem;
+    
+    }
+    .inicioProduto h1 {
+        margin-left: 0;
+        color: black;
+        font-size: 2rem;
+    }
+    .inicioProduto a{
+        margin-left: 1rem;}
+
+    .imagemEstoque {
+        width: 100px;
+    align-items: center;
+    margin-left: 3rem;
+    }
